@@ -1,0 +1,4 @@
+- change direction of flexes
+- nav bar
+- image thingy
+- swirly svgs
