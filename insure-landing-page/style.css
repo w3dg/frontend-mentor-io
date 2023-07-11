@@ -1,5 +1,6 @@
 :root {
   --primary-400: hsl(256, 26%, 20%);
+  --primary-300: hsl(257, 28%, 28%);
   --primary-100: hsl(216, 30%, 68%);
 
   --neutral-700: hsl(270, 9%, 17%);
@@ -17,6 +18,7 @@ body {
   font-family: var(--ff-body);
   font-weight: 400;
   font-size: 16px;
+  overflow-x: hidden;
 }
 
 h1,
@@ -63,6 +65,10 @@ nav {
   background-color: var(--neutral-100);
 }
 
+nav .burger {
+  display: none;
+}
+
 .nav-items {
   display: flex;
   justify-content: center;
@@ -89,9 +95,55 @@ nav {
   font-weight: 700;
 }
 
-.nav-cta-button:hover {
+.nav-cta-button:hover, .nav-cta-button:focus-visible, .nav-cta-button:focus {
   background-color: var(--primary-400);
   color: var(--neutral-100);
+}
+
+@media screen and (max-width: 1075px) {
+
+  nav .burger {
+    display: block;
+    cursor: pointer;
+  }
+
+  .nav-items {
+    padding-inline: 4rem;
+    width: 100vw;
+  }
+  nav {
+    --nav-height: 8vh;
+    height: var(--nav-height);
+  }
+
+  .navigation-links {
+    background-color: var(--primary-300);
+    color: var(--neutral-100);
+    position: absolute;
+    transform: translateX(100%);
+    top: var(--nav-height);
+    right: 0;
+    bottom: 0;
+    transition: transform 0.35s ease-in-out;
+  }
+
+    .nav-items li a:hover {
+      color: var(--neutral-400);
+    }
+
+  .toggle-nav {
+    transform: translateX(0%);
+  }
+
+  .nav-cta-button {
+      border: 2px solid var(--primary-300);
+  }
+
+  .navigation-links .nav-items {
+    margin-top: 3rem;
+    flex-direction: column;
+    gap: calc(100vh / 7);
+  }
 }
 
 .section1 {
@@ -116,7 +168,7 @@ nav {
   grid-column: 2;
 }
 
-@media screen and (max-width: 675px) {
+@media screen and (max-width: 1075px) {
   .intro-grid {
     grid-template-columns: 1fr;
     justify-items: center;
@@ -210,7 +262,7 @@ nav {
 }
 
 
-@media screen and (max-width: 675px) {
+@media screen and (max-width: 1075px) {
 
   .section2 {
     text-align: center;
@@ -239,7 +291,7 @@ nav {
   line-height: 1;
 }
 
-@media screen and (max-width: 675px) {
+@media screen and (max-width: 1075px) {
     .section3 {
       text-align: center;
       flex-direction: column;
@@ -317,7 +369,7 @@ footer .footer-links {
 }
 
 
-@media screen and (max-width: 675px) {
+@media screen and (max-width: 1075px) {
 
   .flex-footer {
     flex-direction: column;
@@ -342,12 +394,8 @@ footer .footer-links {
   }
 }
 
-/* Mobile Design CSS Modifications */
-
-@media screen and (max-width: 675px) {
-
+@media screen and (max-width: 1075px) {
   .container-desktop {
     width: 80%;
   }
-
 }
