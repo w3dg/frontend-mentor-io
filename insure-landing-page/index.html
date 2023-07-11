@@ -2,7 +2,9 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0" /> -->
+    <!-- **** needed for overflow on mobile ****  minimum-scale = 1.0 to limit zooming out-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 minimum-scale=1.0" />
     <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -37,7 +39,7 @@
           <div class="intro-grid">
             <div class="intro-picture">
               <picture>
-                <source srcset="./images/image-intro-mobile.jpg" media="(orientation: portrait)" />
+                <source srcset="./images/image-intro-mobile.jpg" media="(max-width: 1075px)" />
                 <img src="./images/image-intro-desktop.jpg" alt="Happy Family holding hands and laughing" />
               </picture>
             </div>

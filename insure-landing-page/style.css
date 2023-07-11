@@ -18,6 +18,8 @@ body {
   font-family: var(--ff-body);
   font-weight: 400;
   font-size: 16px;
+  min-width: 100vw;
+  min-height: 100vh;
   overflow-x: hidden;
 }
 
@@ -100,7 +102,7 @@ nav .burger {
   color: var(--neutral-100);
 }
 
-@media screen and (max-width: 1075px) {
+@media only screen and (max-width: 1075px) {
 
   nav .burger {
     display: block;
@@ -123,7 +125,7 @@ nav .burger {
     transform: translateX(100%);
     top: var(--nav-height);
     right: 0;
-    bottom: 0;
+    height: 100vh;
     transition: transform 0.35s ease-in-out;
   }
 
@@ -168,12 +170,16 @@ nav .burger {
   grid-column: 2;
 }
 
-@media screen and (max-width: 1075px) {
+@media only screen and (max-width: 1075px) {
   .intro-grid {
     grid-template-columns: 1fr;
     justify-items: center;
     text-align: center;
     padding-top: 0;
+  }
+  
+  .intro-grid h1 {
+    font-size: calc(var(--fs-heading) * 0.8) !important;
   }
 
     .intro-grid .intro {
@@ -262,7 +268,7 @@ nav .burger {
 }
 
 
-@media screen and (max-width: 1075px) {
+@media only screen and (max-width: 1075px) {
 
   .section2 {
     text-align: center;
@@ -291,7 +297,7 @@ nav .burger {
   line-height: 1;
 }
 
-@media screen and (max-width: 1075px) {
+@media only screen and (max-width: 1075px) {
     .section3 {
       text-align: center;
       flex-direction: column;
@@ -369,7 +375,7 @@ footer .footer-links {
 }
 
 
-@media screen and (max-width: 1075px) {
+@media only screen and (max-width: 1075px) {
 
   .flex-footer {
     flex-direction: column;
@@ -394,7 +400,7 @@ footer .footer-links {
   }
 }
 
-@media screen and (max-width: 1075px) {
+@media only screen and (max-width: 1075px) {
   .container-desktop {
     width: 80%;
   }
