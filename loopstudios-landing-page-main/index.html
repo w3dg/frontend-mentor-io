@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Alata&family=Josefin+Sans:wght@300&display=swap");
+    </style>
+    <link rel="stylesheet" href="style.css" />
+    <title>Loopstudios</title>
+  </head>
+  <body>
+    <div class="hero-bg">
+      <header class="header-info">
+        <nav>
+          <img src="./images/logo.svg" alt="Loopstudio Logo" />
+          <div class="burger">
+            <img src="./images/icon-hamburger.svg" alt="Hamburger Navigation Menu" />
+          </div>
+          <ul class="nav-list">
+            <li><a href="#">About</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Events</a></li>
+            <li><a href="#">Products</a></li>
+            <li><a href="#">Support</a></li>
+          </ul>
+        </nav>
+      </header>
+      <div class="hero">
+        <p class="hero-text">Immersive experiences that deliver</p>
+        <!-- <div class="empty"></div> -->
+      </div>
+    </div>
+
+    <main>
+      <section class="description">
+        <!-- also for mobile -->
+        <div class="image">
+          <picture>
+            <img src="./images/desktop/image-interactive.jpg" alt="VR experience" />
+          </picture>
+        </div>
+        <div class="description-text">
+          <h2>The leader in interactive VR</h2>
+          <p>
+            Founded in 2011, Loopstudios has been producing world-class virtual reality projects for some of the best companies around the globe. Our award-winning creations have transformed
+            businesses through digital experiences that bind to their brand.
+          </p>
+        </div>
+      </section>
+
+      <section class="creations-grid">
+        <h3 class="creations-heading">Our creations</h3>
+
+        <div class="creations-list-grid">
+          <div class="creation">
+            <picture>
+              <source srcset="./images/mobile/image-deep-earth.jpg" media="(max-width: 750px)" />
+              <img src="./images/desktop/image-deep-earth.jpg" alt="" />
+              <div class="highlight-overlay">
+                <p>Deep earth</p>
+              </div>
+            </picture>
+          </div>
+          <div class="creation">
+            <picture>
+              <source srcset="./images/mobile/image-night-arcade.jpg" media="(max-width: 750px)" />
+              <img src="./images/desktop/image-night-arcade.jpg" alt="" />
+              <div class="highlight-overlay">
+                <p>Night arcade</p>
+              </div>
+            </picture>
+          </div>
+          <div class="creation">
+            <picture>
+              <source srcset="./images/mobile/image-soccer-team.jpg" media="(max-width: 750px)" />
+              <img src="./images/desktop/image-soccer-team.jpg" alt="" />
+              <div class="highlight-overlay">
+                <p>Soccer team VR</p>
+              </div>
+            </picture>
+          </div>
+          <div class="creation">
+            <picture>
+              <source srcset="./images/mobile/image-grid.jpg" media="(max-width: 750px)" />
+              <img src="./images/desktop/image-grid.jpg" alt="" />
+              <div class="highlight-overlay">
+                <p>The grid</p>
+              </div>
+            </picture>
+          </div>
+          <div class="creation">
+            <picture>
+              <source srcset="./images/mobile/image-from-above.jpg" media="(max-width: 750px)" />
+              <img src="./images/desktop/image-from-above.jpg" alt="" />
+              <div class="highlight-overlay">
+                <p>From up above VR</p>
+              </div>
+            </picture>
+          </div>
+          <div class="creation">
+            <picture>
+              <source srcset="./images/mobile/image-pocket-borealis.jpg" media="(max-width: 750px)" />
+              <img src="./images/desktop/image-pocket-borealis.jpg" alt="" />
+              <div class="highlight-overlay">
+                <p>Pocket borealis</p>
+              </div>
+            </picture>
+          </div>
+          <div class="creation">
+            <picture>
+              <source srcset="./images/mobile/image-curiosity.jpg" media="(max-width: 750px)" />
+              <img src="./images/desktop/image-curiosity.jpg" alt="" />
+              <div class="highlight-overlay">
+                <p>The curiosity</p>
+              </div>
+            </picture>
+          </div>
+          <div class="creation">
+            <picture>
+              <source srcset="./images/mobile/image-fisheye.jpg" media="(max-width: 750px)" />
+              <img src="./images/desktop/image-fisheye.jpg" alt="" />
+              <div class="highlight-overlay">
+                <p>Make it fisheye</p>
+              </div>
+            </picture>
+          </div>
+        </div>
+        <button class="see-all-btn">See all</button>
+      </section>
+    </main>
+    <footer class="flex-flow footer-justify-between">
+      <div class="footer-content">
+        <div class="stack">
+          <img id="footer-logo" src="./images/logo.svg" alt="Loopstudios" />
+          <div class="flex-flow footer-nav">
+            <a href="">About</a>
+            <a href="">Careers</a>
+            <a href="">Events</a>
+            <a href="">Products</a>
+            <a href="">Support</a>
+          </div>
+        </div>
+        <div class="stack">
+          <div class="links">
+            <div class="link-img">
+              <img src="./images/icon-facebook.svg" alt="Go to Loopstudio's Facebook" />
+            </div>
+            <div class="link-img">
+              <img src="./images/icon-twitter.svg" alt="Go to Loopstudio's Twitter" />
+            </div>
+            <div class="link-img">
+              <img src="./images/icon-instagram.svg" alt="Go to Loopstudio's Instagram" />
+            </div>
+            <div class="link-img">
+              <img src=".//images/icon-pinterest.svg" alt="Go to Loopstudio's Pinterest" />
+            </div>
+          </div>
+          <p class="copyright">&copy; 2021 Loopstudios. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
