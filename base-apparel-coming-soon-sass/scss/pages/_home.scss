@@ -1,0 +1,165 @@
+@use "../abstracts/typography";
+@use "../abstracts/colors";
+
+body {
+  font-family: typography.$ff-base;
+
+  min-height: 100vh;
+}
+
+.grid {
+  display: grid;
+}
+
+.row-6-col-12 {
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+}
+
+nav {
+  grid-column: 2 / 8;
+  grid-row: 1 / 2;
+  min-height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.coming-soon {
+  grid-column: 2 / 7;
+  grid-row: 2 / 6;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.coming-soon__title {
+  font-size: typography.$fs-heading;
+  text-transform: uppercase;
+  letter-spacing: 1.5rem;
+  color: colors.$neutral-400;
+  margin-bottom: 0;
+}
+
+.accent {
+  font-weight: typography.$fw-300;
+  color: colors.$primary-400;
+}
+
+.coming-soon {
+  p {
+    color: colors.$primary-400;
+    max-width: 45ch;
+    font-size: typography.$fs-base;
+    line-height: 2rem;
+    margin-bottom: 4rem;
+  }
+}
+
+.email-form {
+  $_border-radius: 1000vw;
+  display: flex;
+  background-color: pink;
+  font-size: typography.$fs-base;
+  max-width: 45ch;
+  height: 4rem;
+  position: relative;
+  border-radius: $_border-radius;
+  border: 0;
+
+  input {
+    border-radius: $_border-radius;
+    border: 1px solid colors.$primary-400;
+    width: 100%;
+    padding: 0 2rem;
+
+    &:focus,
+    &:focus-visible {
+      outline: 1px solid colors.$primary-700;
+    }
+  }
+
+  button {
+    position: absolute;
+    right: 0;
+    height: 100%;
+    aspect-ratio: 1.5/1;
+    border-radius: $_border-radius;
+    border: 0;
+    background: colors.$primary-700;
+
+
+    &:focus,
+    &:focus-visible,
+    &:hover {
+      background: colors.$primary-400;
+      outline: 1px solid colors.$primary-700;
+      box-shadow: 0px 0px 10px 10px rgba(#111111, $alpha: 0.2);
+    }
+  }
+}
+
+
+
+.hero {
+  background-image: url(../../images/hero-desktop.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  grid-column: 8 / 13;
+  grid-row: 1 / 7;
+}
+
+@media screen and (width <=1170px) {
+
+  .row-6-col-12 {
+    grid-template-columns: 1fr;
+    grid-template-rows: 8vh 2fr 3fr;
+  }
+
+  nav {
+    grid-column: 1;
+    grid-row: 1/2;
+  }
+
+  .coming-soon {
+    grid-column: 1;
+    grid-row: 3 / 4;
+
+    text-align: center;
+  }
+
+  .coming-soon {
+    p {
+      line-height: 1.4;
+      max-width: 35ch;
+      font-size: typography.$fs-base-mobile;
+      margin-inline: auto;
+      margin-bottom: 2rem;
+    }
+  }
+
+  .coming-soon__title {
+    font-size: typography.$fs-heading-mobile;
+    text-transform: uppercase;
+    letter-spacing: initial;
+    color: colors.$neutral-400;
+    margin-bottom: 0;
+    letter-spacing: 0.5rem;
+  }
+
+  .email-form {
+    margin-inline: auto;
+    width: min(90%, 200ch);
+  }
+
+  .hero {
+    background-image: url(../../images/hero-mobile.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top left;
+    grid-column: 1;
+    grid-row: 2 / 3;
+  }
+
+}
