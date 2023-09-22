@@ -1,0 +1,16 @@
+.header-bg {
+  background-image: url(/images/bg-header-desktop.svg);
+  background-position: center;
+  background-repeat: repeat-x;
+}
+
+@media (width <= 48rem) {
+  .header-bg {
+    background-image: url(/images/bg-header-mobile.svg);
+  }
+}
+
+.filter-bar {
+  left: 50%;
+  transform: translateX(-50%);
+}
