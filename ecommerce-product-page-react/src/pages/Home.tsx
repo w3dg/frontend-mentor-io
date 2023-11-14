@@ -4,7 +4,7 @@ import { Carousel } from "../components/Carousel";
 
 export const Home = () => {
   return (
-    <main className="grid grid-rows-2 lg:mx-auto lg:my-4 lg:max-w-7xl h-5/6 lg:grid-rows-1 lg:grid-cols-2 text-neutral-700">
+    <main className="grid grid-rows-2 lg:gap-8 lg:mx-auto lg:my-4 lg:max-w-7xl h-5/6 lg:grid-rows-1 lg:grid-cols-2 text-neutral-700">
       <Carousel></Carousel>
       <section className="grid gap-1 px-10 py-4 lg:my-28">
         <p className="mt-auto font-bold tracking-widest text-orange-400 uppercase">Sneaker Company</p>
